@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Calculator</title>
+        <link type="text/css" rel="stylesheet" href="style.css"/>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+       <section id="section">
+        <img src="bar.png" id="bar" alt="image"/>
+         <header>
+           <img src="calculator.png" id="calculator" alt="image"/>
+            Calculator
+         </header>
+         <article>
+            <div id="borderMenu">
+                <ul id="mainMenu" class="dropdown">
+                    <li class="main" id="one">
+                      <span class="borderHover">
+                        <span class="underline">V</span>iew
+                      </span>
+                        <ul id="viewSubMenu">
+                            <li>Standart</li>
+                            <li>Scientific</li>
+                            <li>Programmer</li>
+                            <li>Statistic</li>
+                            <li>History</li>
+                            <li>Digit grouping</li>
+                            <li>Basic</li>
+                            <li>Unit convertion</li>
+                            <li>Date Calculation</li>
+                            <li id="link">
+                                Worsheets
+                                <img src="arrow_right.png" id="arrowRight" alt="image"/>
+                                <ul id="worsksheetsSubMenu">
+                                    <li>Mortage</li>
+                                    <li>Vehicle lease</li>
+                                    <li>Fuel economy(mpg)</li>
+                                    <li>Fuel economy(L/100)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="main" id="two">
+                        <span class="borderHover">
+                          <span class="underline">E</span>dit
+                        </span>    
+                        <ul id="editSubMenu">
+                            <li>Copy</li>
+                            <li>Paste</li>
+                        </ul>
+                    </li>
+                    <li class="main" id="three">
+                        <span class="borderHover">
+                          <span class="underline">H</span>elp
+                        </span>    
+                        <ul id="helpSubMenu">
+                            <li>View Help</li>
+                            <li>About Cualculator</li>
+                        </ul>
+                    </li>
+                </ul>
+                </div> 
+                <input type="text" id="result" value="8854455" disabled="disabled">
+                <div id="zeroBorder">
+                  <ul class="bitsTable">
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                  </ul>
+                  <span class="first">63</span>
+                  <span class="second">47</span>
+                  <span class="third">32</span>
+                  <ul class="bitsTable">
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                  </ul>
+                  <span class="first">31</span>
+                  <span class="second">15</span>
+                  <span class="third">  0</span>
+                </div>
+                   <ul class="RadioBar">
+                        <li><input type="radio" value="Hex" name="one"/>Hex</li>
+                        <li><input type="radio" value="Dec" checked="checked" name="one"/>Dec</li>
+                        <li><input type="radio" value="Oct" name="one"/>Oct</li>
+                        <li><input type="radio" value="Bin" name="one"/>Bin</li>
+                    </ul>
+                     
+                    <ul class="RadioBar" id="secondRadioBar">
+                        <li><input type="radio" value="Qword" checked="checked" name="two"/>Qword</li>
+                        <li><input type="radio" value="Dword" name="two"/>Dword</li>
+                        <li><input type="radio" value="Word" name="two"/>Word</li>
+                        <li><input type="radio" value="Byte" name="two"/>Byte</li>
+                    </ul>
+                
+                <table>
+                    <tr>
+                        <td><input type="button" disabled="disabled" class="special"/></td>
+                        <td><input type="button" value="Mod" class="active"/></td>
+                        <td><input type="button" value="A" disabled="disabled" class="special"/></td>
+                        <td><input type="button" value="MC " disabled="disabled" class="special" /></td>
+                        <td><input type="button" value="MR " disabled="disabled" class="special"/></td>
+                        <td><input type="button" value="MS " disabled="disabled" class="special"/></td>
+                        <td><input type="button" value="M+ " disabled="disabled" class="special"/></td>
+                        <td><input type="button" value="M- " disabled="disabled" class="special"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value=" ( " class="active"/></td>
+                        <td><input type="button" value=" ) "/></td>
+                        <td><input type="button" value="B" disabled="disabled" class="special"></td>
+                        <td><input type="button" class="active" id="leftarrow"/></td>
+                        <td><input type="button" value="CE " class="active"/></td>
+                        <td><input type="button" value=" C " class="active"/></td>
+                        <td><input type="button" value="+" class="active"/></td>
+                        <td><input type="button" value="√" class="special"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="Rol" class="active"/></td>
+                        <td><input type="button" value="Ror " class="active"/></td>
+                        <td><input type="button" value="C" disabled="disabled" class="special"/></td>
+                        <td><input type="button" value=" 7 " class="active"/></td>
+                        <td><input type="button" value=" 8 " class="active"/></td>
+                        <td><input type="button" value=" 9 " class="active"/></td>
+                        <td><input type="button" value=" / " class="active"/></td>
+                        <td><input type="button" value=" % " class="special"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="Or " class="active"/></td>
+                        <td><input type="button" value="Xor" class="active"/></td>
+                        <td><input type="button" value="D" disabled="disabled" class="special"/></td>
+                        <td><input type="button" value=" 4 " class="active"/></td>
+                        <td><input type="button" value=" 5 " class="active"/></td>
+                        <td><input type="button" value=" 6 " class="active"/></td>
+                        <td><input type="button" value=" * " class="active"/></td>
+                        <td><input type="button" value="1/x" class="special"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="Lsh" class="active"/></td>
+                        <td><input type="button" value="Rsh" class="active"/></td>
+                        <td><input type="button" value="E" disabled="disabled" class="special"/></td>
+                        <td><input type="button" value=" 1 " class="active"/></td>
+                        <td><input type="button" value=" 2 " class="active"/></td>
+                        <td><input type="button" value=" 3 " class="active"/></td>
+                        <td><input type="button" value=" - " class="active"/></td>
+                        <td rowspan="2"><input type="button" value="=" class="active" id="equal"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="Not " class="active"/></td>
+                        <td><input type="button" value="And" class="active"/></td>
+                        <td><input type="button" value="F" disabled="disabled" class="special"/></td>
+                        <td colspan="2"><input type="button" value="0" class="active" id="zero"/></td>
+                        <td><input type="button" value=" . " class="special"/></td>
+                        <td><input type="button" value=" + " class="active"/></td>
+                    </tr>
+                </table>
+           </article>
+      </section> 
+    <script>
+ $(document).ready(function(){
+    
+  
+	$('#one').click(
+		function () {
+            
+			//show its submenu
+			$('#viewSubMenu').toggle();
+            $("#helpSubMenu").hide();
+            $("#editSubMenu").hide();
+
+		}
+	);
+    
+    $('#two').click(
+		function () {
+            
+			//show its submenu
+			$('#editSubMenu').toggle();
+            $("#viewSubMenu").hide();
+            $("#helpSubMenu").hide();
+
+		}
+	);
+    
+    $('#three').click(
+		function () {
+            
+			//show its submenu
+			$('#helpSubMenu').toggle();
+            $("#viewSubMenu").hide();
+            $("#editSubMenu").hide();
+
+		}
+	);
+    
+     $(document).bind('click', function(e) {
+
+                var $clicked = $(e.target);
+
+                if (! $clicked.parents().hasClass("dropdown")){
+
+                    $("#viewSubMenu").hide();
+                    $("#editSubMenu").hide();
+                    $("#helpSubMenu").hide();
+                    
+                    }
+        });
+
+
+   
+    $('#link').hover(
+		function () {
+            
+			//show its submenu
+			$('#worsksheetsSubMenu').css("display","inline-block");
+
+		},
+        function () {
+            //hide its submenu
+            $('#worsksheetsSubMenu').css("display","none");      
+        }
+		
+	);
+    
+    });
+   
+    </script>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+article.ticket {
+
+  background-color:#595959;
+  width:304px;
+  height:256px;
+  padding-left:5px;
+  padding-top:7px;
+  padding-bottom:5px;
+}
+
+article.ticket dl {
+  
+  margin-top:16px;
+
+}
+
+article.ticket dd {
+  
+  margin-left:120px;
+  margin-top:16px;
+  
+}
+article.ticket dd.white {
+
+  color:#dbc897;
+  
+}
+
+article.ticket dd.darkwhite {
+
+  color:#919f9b;
+}
+
+article.ticket dd.orange {
+
+  color:#d96a21;
+  font-weight:bold;
+}
+article.ticket dd.white span {
+  
+  color:#f30100;
+  
+}
+
+article.ticket dd.before:before {
+
+   content:url('dot.png');
+   margin-right:5px;
+}
+
+article.ticket dt.labels {
+  
+  float:left;
+  color:#ddd9ce;
+  font-style:italic;
+  margin-top:16px;
+  
+}
+article.ticket dt.labels:first-child  {
+  
+  margin-top:0;
+  
+}
+
+article.ticket .title {
+
+     color:#9badb5;
+	 font: 16px Tahoma,san-serif;
+	 margin:0;
+}
+
+.clear:after {
+
+	display: block;
+	content: "";
+	clear: both;
+	_zoom: 1;
+}
+
