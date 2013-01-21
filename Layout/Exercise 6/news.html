@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link type="text/css" rel="stylesheet" href="style.css">
+         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>    
+        <title>News</title>
+    </head>
+    <body>
+      <section id="border">
+	   <header>
+			<ul id="mainmenu">
+				 <li id="news"><a href="#">Новини</a></li>
+				 <li><a href="#">Спорт</a></li>
+				 <li><a href="#">Емисии</a></li>
+				 <li><a href="#">Любопитно</a></li>
+				 <li><a href="#">Аз репотерът</a></li>
+				 <li><a href="#">Тази сутрин</a></li>
+			</ul>
+		</header>
+        <ul id="submenu">
+             <li id="first"><a href="#">Интернет Новини-13.07.2010г.</a></li>
+             <li id="second"><a href="#">Проливни дъждове в Индия,Китай и Дания,необичайни горещини в Иран</a></li>
+             <li id="third"><a href="#">Над 200 хектара горят на територията на бивш военен полигон в Германия</a></li>
+             <li id="fourth"><a href="#">23-ма ранени при сблъсък на два пътнически влака в Полша</a></li>
+             <li id="fifth"><a href="#">Диференцират от догодина минималния осигурителен доход на самоосигуряващите се</a></li>
+         </ul>
+         <a href="#" id="image"><img src="first.jpg" class="active" id="firstimage" /></a>
+         <a href="#" id="image"><img src="second.jpg" id="secondimage" /></a>
+         <a href="#" id="image"><img src="third.jpg" id="thirdimage" /></a>
+         <a href="#" id="image"><img src="fourth.jpg" id="fourthimage" /></a>
+         <a href="#" id="image"><img src="fifth.jpg" id="fifthimage"/></a> 
+         
+      </section>
+      <script>
+        
+        $(document).ready(function () {
+        	
+        	$("#first").css("background", "#00968C");
+        	$("#first a").css("color", "white");
+			$("#news").css("background", "#1E3741");
+        	$("#news").find("a").css("color", "white");
+			
+        	$("#first").hover(
+        		function () {
+        		
+        		
+        		$('img').each(function () {
+        			this.style.display = "none"
+        		});
+        		$("#first").css("background", "#00968C");
+        		$("#firstimage").css("display", "block");
+        		$("#first a").css("color", "white");
+        		
+        	},
+        		
+        		function () {
+        		$("#first").css("background", "#1E3741");
+        		$("#first a").css("color", "#93ACA9");
+        	});
+        	
+        	$("#second").hover(function () {
+        		
+        		$('img').each(function () {
+        			this.style.display = "none";
+        		});
+        		
+        		$('#secondimage').css('display', 'block');
+        		$("#second a").css("color", "white");
+				$("#first").css("background", "#1E3741");
+				$("#first a").css("color", "#93ACA9");
+        		
+        	},
+        		
+        		function () {
+        		
+        		$("#second a").css("color", "#93ACA9");
+				
+        	});
+        	
+        	$("#third").hover(function () {
+        		
+        		$('img').each(function () {
+        			this.style.display = "none"
+        		});
+        		
+        		$('#thirdimage').css('display', 'block');
+        		$("#third a").css("color", "white");
+        		$("#first").css("background", "#1E3741");
+				$("#first a").css("color", "#93ACA9");
+        	},
+        		
+        		function () {
+        		
+        		$("#third a").css("color", "#93ACA9");
+				
+        	});
+        	
+        	$("#fourth").hover(function () {
+        		
+        		$('img').each(function () {
+        			this.style.display = "none"
+        		});
+        		
+        		$('#fourthimage').css('display', 'block');
+        		$("#fourth a").css("color", "white");
+				$("#first").css("background", "#1E3741");
+				$("#first a").css("color", "#93ACA9");
+        		
+        	},
+        		
+        		function () {
+        		
+        		$("#fourth a").css("color", "#93ACA9");
+				
+				
+        	});
+        	
+        	$("#fifth").hover(function () {
+        		
+        		$('img').each(function () {
+        			this.style.display = "none"
+        		});
+        		
+        		$('#fifthimage').css('display', 'block');
+        		$("#fifth a").css("color", "white");
+        		$("#first").css("background", "#1E3741");
+				$("#first a").css("color", "#93ACA9");
+        	},
+        		
+        		function () {
+        		
+        		$("#fifth a").css("color", "#93ACA9");
+				
+        	});
+        	
+        	$("#mainmenu li").click(function () {
+        		
+        		$('#mainmenu li').each(function () {
+        			this.style.background = "#4B5F67";
+        			$(this).find("a").css("color", "#93ACA9");
+        		});
+        		
+        		$(this).css("background", "#1E3741");
+        		$(this).find("a").css("color", "white");
+        		
+        	});
+        	
+        });
+    </script>
+    </body>
+</html>
