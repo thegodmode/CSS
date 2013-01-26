@@ -2,7 +2,33 @@
 <html>
 <head>
     <title>Web Gallery</title>
-    <link href="style.css" rel="stylesheet" />
+    <style>
+		#simple-web-gallery nav ul li .thubnail {
+		  width: 150px;
+		  height: 150px;
+		}
+		.images-container {
+		  position: relative;
+		}
+		.images-container input[type="radio"] {
+		  display: none;
+		}
+		.images-container input[type="radio"]:checked + .image {
+		  opacity: 1;
+		  -webkit-transition: opacity 1.5s ease-in-out;
+		  -moz-transition: opacity 1.5s ease-in-out;
+		  -o-transition: opacity 1.5s ease-in-out;
+		  transition: opacity 1.5s ease-in-out;
+		}
+		.images-container .image {
+		  width: 400px;
+		  height: 400px;
+		  opacity: 0;
+		  display: inline-block;
+		  position: absolute;
+		  left: 106px;
+		}
+	</style>
 </head>
 <body>
   <div id="simple-web-gallery"> 
