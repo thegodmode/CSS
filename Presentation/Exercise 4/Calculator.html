@@ -3,7 +3,317 @@
     <head>
         <meta charset="utf-8" />
         <title>Calculator</title>
-        <link type="text/css" rel="stylesheet" href="style.css"/>
+        <style>
+					#section{
+
+				background:#C2DFFB;
+				border:1px solid black;
+				width:516px;
+				border-radius:5px;
+				padding:0px 11px 5px 5px;
+				float:left;
+				
+			}
+
+			#calculator{
+				
+				width:14px;
+				float:left;
+				padding-right:10px;
+				
+				
+			}
+
+			header{
+
+			  padding:3px 3px 6px 0px;
+
+			}
+			#bar {
+
+				float:right;
+			}
+
+			ul {
+
+				list-style:none;
+			}
+
+			#helpSubMenu{
+
+				margin-left:92px;
+				display:none;
+				position:absolute;
+				border:1px solid #B3B9BF;
+				background:#F0F0F0;
+				
+			}
+			#helpSubMenu li{
+				  
+				padding:5px 43px 3px 20px;
+				margin: 0px 0px 0px -40px;
+				
+			}
+
+			#helpSubMenu li:hover{
+
+				background:#AECFF7;
+				
+			}
+
+			#editSubMenu{
+				
+				display:none;
+				position:absolute;
+				border:1px solid #B3B9BF;
+				background:#F0F0F0;
+				margin:0px 0px 0px 55px;
+				
+				
+			}
+
+			#editSubMenu li{
+				  
+				padding:5px 43px 3px 43px;
+				margin: 0px 0px 0px -40px;
+			  
+			}
+
+			#editSubMenu li:hover{
+				  
+				 background:#AECFF7;
+			  
+			}
+			#viewSubMenu{
+				margin-left:-40px;
+				position:absolute;
+				display:none;
+				margin-left:0px;
+				background:#F0F0F0;
+				padding: 3px 0px  0px 16px;
+				border:1px solid #B3B9BF;
+				border-left:none;
+			}
+
+			#viewSubMenu li {
+			   
+				
+				padding:9px 10px 5px 24px;
+				margin:-6px 0px 0px -16px;
+			}
+
+			#viewSubMenu li:hover {
+			   
+				background:#AECFF7;
+			  
+			}
+
+			#worsksheetsSubMenu{
+
+			 margin-left:18px;
+			 margin-top:-9px;
+			 display:none;
+			 position:absolute;
+			 border:1px solid #B3B9BF;
+			 background:#F0F0F0;
+			 width:117px;
+			  
+				
+			}
+
+			#worsksheetsSubMenu li {
+			   
+				
+				padding:10px 0px 4px 13px;
+				margin:0px 0px 0px -40px;
+			}
+
+			#worsksheetsSubMenu li:hover {
+			   
+				background:#AECFF7;
+				
+			}
+
+			.main{
+
+				display:inline;
+				padding-left:10px;
+				font-size:16px;
+				
+				
+			}
+
+			#mainMenu li:hover{
+				
+				cursor:pointer;
+				
+				
+			}
+
+			#mainMenu {
+
+				margin:5px 0px 13px -40px;
+			}
+
+			article {
+				border:1px solid #B3B9BF;
+				border-radius:3px;
+				float:left;
+				background:#d9e4f1;
+				
+			}
+
+			#borderMenu{
+				border-bottom:1px solid #B6C0CB;
+				height:20px;
+				margin-top:-5px;
+				background:#DCE2F3;
+			}
+
+			.underline{
+				text-decoration:underline;
+			}
+
+			.borderHover:hover{
+
+				border:1px solid #B6C0CB;
+				border-radius:3px;
+				border-bottom:none;
+				border-top:none;
+				padding:1px 3px 0px 3px;
+				
+				
+			}
+
+
+			#result {
+				background: #e5eefb; 
+				background: -webkit-linear-gradient(top, #e5eefb,#fff); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top, #e5eefb,#fff); /* Opera 11.10+ */
+				background: -moz-linear-gradient(top, #e5eefb,#fff); /* IE10+ */
+				background: linear-gradient(top, #e5eefb,#fff); /* W3C */
+				width:489px;
+				height:60px;
+				margin:10px 13px 3px 10px;
+				border:1px solid #B6C0CB;
+				border-radius:3px;
+				font: bold 22px serif;
+				text-align:right;
+				line-height:80px;
+				padding-right:5px;
+				color:black;
+			}
+
+			#zeroBorder {
+				
+				border:1px solid #B6C0CB;
+				margin:10px 11px 10px 10px;
+				border-radius:3px;
+				padding-left:6px;
+				padding-top:3px;
+				
+			}
+
+			.bitsTable li{
+				display:inline;
+				margin-left:22px;
+				font-weight:500;
+			}
+			.bitsTable {
+				display:inline;
+				margin-left:-51px;
+				margin-right:37px;
+			}
+
+			.first {
+				margin-left:11px;
+				margin-right:212px;
+				color:#9D99B7;
+			}
+
+			.second {
+				margin-right:170px;
+				color:#9D99B7;
+			}
+
+			.third{
+				color:#9D99B7;
+				white-space:pre;
+			}
+
+			.RadioBar {
+				border: 1px solid #B6C0CB;
+				margin-left:10px;
+				width:89px;
+				padding:4px 0px 4px 2px;
+				margin-top:-4px;
+				
+				
+			}
+
+			.RadioBar li {
+				padding-bottom: 6px;
+				
+			}
+
+			#secondRadioBar{
+				margin-top:-10px;
+			   
+				
+			}
+
+			table{
+				margin:-264px 0px 0px 0px;
+				float:right;
+				padding:0px 6px 0px 9px;
+			}
+
+			table tr td input {
+				width:46px;
+				height:38px;
+				
+			}
+			table tr td input:hover {
+			   
+				background: #fff0df; 
+				background: -webkit-linear-gradient(top, #fff0df,#ffd06c); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top, #fff0df,#ffd06c); /* Opera 11.10+ */
+				background: -moz-linear-gradient(top, #fff0df,#ffd06c); /* IE10+ */
+				background: linear-gradient(top, #fff0df,#ffd06c); /* W3C */
+				border-color:#ffd06c;
+				
+			}
+
+			.special{
+				border:1px solid #B6C0CB;
+				background:#d9e4f1;
+				border-radius:3px;
+				color:black;
+			}
+
+
+
+			#equal{
+				height:80px;
+			}
+
+			#zero{
+				width:94px;
+			}
+
+			#leftarrow{
+				background:url('Picture1.png') no-repeat;
+				background-size:41px 34px;
+				border-radius:3px;
+			}
+
+
+			#arrowRight{
+				
+				width:10px;
+				margin-left:10px;
+			}
+		</style>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     </head>
     <body>
